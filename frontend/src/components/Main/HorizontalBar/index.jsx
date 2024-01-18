@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:669ca553a47201c808eafb43baeee2c0148a5ae69cebb5a9949108bd98a276e3
-size 373
+import React from 'react';
+import { Grid } from '@material-ui/core';
+import Wrapper from './styles';
+const HorizontalBar = (props) => {
+  return (
+    <Wrapper container style={{ backgroundColor: '#F5F5F5' }}>
+      <Grid
+        item
+        style={{
+          width: `${props.percentage}%`,
+        }}
+      ></Grid>
+    </Wrapper>
+  );
+};
+
+export default HorizontalBar;

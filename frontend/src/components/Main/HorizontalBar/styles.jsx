@@ -1,3 +1,11 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:bba2f1f1b433fccedc7433c1f3304fdbc105d71e3b154befd064a4236d84a88d
-size 179
+import styled from 'styled-components';
+
+const Wrapper = styled.div`
+  background: #f5f5f5;
+  & > div {
+    height: 30px;
+    background: #535bff;
+  }
+`;
+
+export default Wrapper;

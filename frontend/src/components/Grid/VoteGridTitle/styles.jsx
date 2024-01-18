@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7fbc9b054a7c88aac728bc3842e06688ca80c06e9d096412cb2f53b64c406f7e
-size 405
+import styled from 'styled-components';
+
+const Wrapper = styled.div`
+  .vote-grid-title-grid {
+    margin: 30px;
+  }
+  .vote-grid-title-typography1 {
+    font-weight: 900;
+    font-size: 70px;
+  }
+  .vote-grid-title-typography2 {
+    max-width: 1000px;
+    margin: 15px auto 60px;
+    word-break: keep-all;
+    font-size: 24px;
+    line-height: 1.25;
+    font-weight: 500;
+  }
+`;
+
+export default Wrapper;

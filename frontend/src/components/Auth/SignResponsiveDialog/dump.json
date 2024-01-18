@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:422dc882d9cd4a9e3b75da8eaafb4f06d24f9650efb2a9bf4a9a961747c6cab1
-size 326
+{
+  "user_no": 22,
+  "user_id": "test@ruu.kr",
+  "user_nm": "test",
+  "user_pwd": "",
+  "user_type": "A",
+  "user_img_url": "IMAGE-1593496039833.png",
+  "join_dt": "2020-06-30T05:47:20.000Z",
+  "updt_dt": "2020-06-30T05:47:20.000Z",
+  "web_site": "as",
+  "confirm_code": 0,
+  "active": 1,
+  "token": "",
+  "status": "login"
+}
