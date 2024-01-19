@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:79370c3017d6174c94d646c2c1c67f29f4bc00b456ac920553e62c5e98704829
-size 367
+import sys
+ 
+import lirc
+
+if len(sys.argv) >= 3:
+    sys.stderr.write("Usage: irw.py [socket path]")
+    sys.exit(1)
+
+path = sys.argv[1] if len(sys.argv) == 2 else None
+with lirc.RawConnection(path) as conn:
+    while True:
+        key = conn.readline().split()[2]
+        
+        if(key == "KEY_5"):
+            print("FIVE")
+
+        else:
+            print("NO")
