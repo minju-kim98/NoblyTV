@@ -1,24 +1,3 @@
-package BACKEND.project.domain;
-
-import jakarta.persistence.*;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
-import java.time.LocalTime;
-
-@Data
-@NoArgsConstructor
-@Entity
-public class Medication {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "old_user_id")
-    private OldUserInfo oldUser;
-
-    private String medicine;
-    private LocalTime medicationTime;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:412247324d148da19201adc1fc29b348c12e8126bbaf3af26b8e0b17d22a64e4
+size 579
