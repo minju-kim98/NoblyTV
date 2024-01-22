@@ -1,15 +1,3 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import HomeLayout from "./pages";
-
-// App 컴포넌트 내에서 라우터 설정
-function App() {
-  return (
-    <Router>
-        <Routes>
-          <Route path="/" element={<HomeLayout />} />
-        </Routes>
-    </Router>
-  );
-}
-
-export default App;
+version https://git-lfs.github.com/spec/v1
+oid sha256:8b3ea030d59a1943b4b14a19e4aca0d0031c4a4e0444861cdcb034094c557186
+size 539
