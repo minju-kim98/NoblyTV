@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a183552d7fb77a8689df2a97165d45c4867fdffec6699d8027cef7cf3984e5fc
-size 339
+/* eslint-disable @typescript-eslint/comma-dangle */
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+// eslint-disable-next-line import/extensions
+import App from './App.tsx';
+import './index.css';
+
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
