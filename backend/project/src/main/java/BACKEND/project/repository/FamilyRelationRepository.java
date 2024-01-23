@@ -1,3 +1,9 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2d21e7e21abc48b9cd73c65186fe66d74df295fe59c11b22867c2e9e9e7dbad3
-size 298
+package BACKEND.project.repository;
+
+import BACKEND.project.domain.FamilyRelation;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface FamilyRelationRepository extends JpaRepository<FamilyRelation, Long> {
+}

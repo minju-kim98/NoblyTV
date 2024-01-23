@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:db27fc2bfde168c16b8b9789757bea93f889b7f369d4f9783159cb5d32031b13
-size 454
+package BACKEND.project.domain;
+
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Past;
+import javax.validation.constraints.Size;
+import java.time.LocalDate;
+
+@Data
+@NoArgsConstructor
+public class DiaryDto {
+
+    private Long id;
+
+    @NotBlank()
+    private String text;
+}
