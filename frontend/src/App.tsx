@@ -1,16 +1,3 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import LogInPage from './pages/LogIn/LogInPage';
-import SignUpPage from './pages/LogIn/SignUpPage';
-
-function App() {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<LogInPage />} />
-        <Route path="/signup/*" element={<SignUpPage />} />
-      </Routes>
-    </Router>
-  );
-}
-
-export default App;
+version https://git-lfs.github.com/spec/v1
+oid sha256:4c47646dedc33867d5c886a179283bc5bed7166e022a7e0eb641d95755a6f5b7
+size 682
