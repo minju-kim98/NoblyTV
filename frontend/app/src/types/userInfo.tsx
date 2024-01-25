@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:dfb9afaaa3237ae002e6e96d3201439406cc74c9f7f10c6fc54516e02048dbdf
-size 477
+// types/OldUserInfo.ts
+export interface Disease {
+  // Disease 타입의 필드 정의
+}
+
+export interface Medication {
+  // Medication 타입의 필드 정의
+}
+
+export interface FamilyUserInfo {
+  // FamilyUserInfo 타입의 필드 정의
+}
+
+export interface UserInfo {
+  name: string;
+  userId: string;
+  password: string;
+  password2: string;
+  phoneNumber: string;
+  diseases: Disease[];
+  birth: string;
+  medications: Medication[];
+  familyMembers: FamilyUserInfo[];
+}

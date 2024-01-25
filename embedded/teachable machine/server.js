@@ -1,3 +1,23 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3431095676dab87cd48299f942df3e2943f49190b3c8dbcc0bfb2e58ab00fdfe
-size 533
+const express = require("express");
+const app = express();
+const cors = require("cors");
+
+const PORT = 9000;
+
+app.use(cors());
+app.use(express.json());
+
+
+app.get("/hi", (req, res) => {
+  console.log("get!");
+  res.send({ message : "get!!" });  
+});
+
+app.post("/", (req, res) => {
+  console.log("post : ", req.body); // req.body에 바로 데이터가 들어옴
+  return res.json(req.body.class);
+});
+
+app.listen(PORT, () =>
+  console.log(`Node.js Server is running on port ${PORT}....`)
+);
