@@ -1,3 +1,26 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0409f6f2508d662bf9b02183bda41c581b1d99de6acc43925e9d6ddd0b209f25
-size 471
+import styled from 'styled-components';
+
+const LargeBtnStyle = styled.div`
+  width: 300px;
+  height: 50px;
+
+  cursor: pointer;
+
+  background: #eac164;
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+
+  color: #ffffff;
+  font-weight: 900;
+  font-size: 24px;
+  text-align: center;
+  line-height: 2;
+  filter: drop-shadow(0px 1px 4px rgba(0, 0, 0, 0.25));
+
+  &:hover {
+    background: #ddb75d;
+  }
+`;
+
+export default LargeBtnStyle;
