@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3e1aafb2a0191648450a993f4ac1a437266483d942332a67deaef4e8dbc6aec3
-size 292
+package BACKEND.project.domain;
+
+import lombok.Data;
+
+import javax.validation.constraints.NotBlank;
+import java.time.LocalTime;
+
+@Data
+public class MedicationDto {
+
+    @NotBlank(message = "약 이름은 필수입니다")
+    private String medicine;
+
+    private LocalTime medicationTime;
+}
