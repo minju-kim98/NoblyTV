@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3fb68531cae689e9fdc7e7339db6127bea206a091fce24b99d4fe2716f5435b9
-size 206
+version: '3'
+services:
+  db:
+    image: mariadb
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+    ports:
+      - "3306:3306"
+  web:
+    build: .
+    depends_on:
+      - db
+    ports:
+      - "8080:8080"
