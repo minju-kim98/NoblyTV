@@ -1,3 +1,22 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:309b4ce3452cf0aaf9edc10de403ebe0a1bc419d906de3451d3bc8457e96264c
-size 415
+import styled from 'styled-components';
+
+const BgImgS = styled.div`
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+
+  background: url('/src/assets/bg_img.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  z-index: -1;
+`;
+
+export default BgImgS;

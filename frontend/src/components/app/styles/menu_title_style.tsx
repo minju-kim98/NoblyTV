@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:22c23f6c9c70f001a92593d1e4db751c3e0842e805797b09700c20c522824726
-size 268
+import styled from 'styled-components';
+
+const MenuTitleS = styled.div`
+  color: #666666;
+  font-weight: 900;
+  font-size: 32px;
+  text-align: center;
+  line-height: 2;
+  filter: drop-shadow(0px 1px 4px rgba(0, 0, 0, 0.25));
+`;
+
+export default MenuTitleS;

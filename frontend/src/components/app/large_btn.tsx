@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:996d4da0787e648397f275915e00c7bca108ee38d13108b97feaed57b7bcfc7f
-size 470
+import { CSSProperties } from 'react';
+import LargeBtnS from './styles/large_btn_style';
+
+interface LargeBtnProps {
+  largeBtnContents: string;
+  pageUrl: string;
+  // eslint-disable-next-line react/require-default-props
+  style?: CSSProperties;
+}
+
+function LargeBtn({ largeBtnContents, pageUrl, style }: LargeBtnProps) {
+  return (
+    <LargeBtnS to={pageUrl} style={style}>
+      {largeBtnContents}
+    </LargeBtnS>
+  );
+}
+
+export default LargeBtn;

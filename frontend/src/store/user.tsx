@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8280f9f3dde106786b313d89d4387ed6bc5db7682e0742be00b6ae3c46ff51dd
-size 448
+import { create } from 'zustand';
+
+// 유저 정보
+interface User {
+  name: string;
+  userId: string;
+  password1: string;
+  password2: string;
+  birthday: string;
+  gender: string;
+}
+
+// 스토어 상태
+interface UserState {
+  users: User[];
+  addUser: (user: User) => void;
+}
+
+const useUserStore = create<UserState>(set => ({
+  users: [],
+  addUser: user => set(state => ({ users: [...state.users, user] })),
+}));
+
+export default useUserStore;

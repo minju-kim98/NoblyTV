@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ff4d8855c2f760b7b457551351e2fa50408289539a31bb7511347c1bb1e50a8b
-size 437
+import styled from 'styled-components';
+
+export const FalseMsgImgS = styled.div`
+  width: 15px;
+  height: 15px;
+
+  background: url('/src/assets/false.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+`;
+
+export const FalseMsgContentsS = styled.div`
+  margin-left: 5px;
+  color: #ff1f1f;
+  font-weight: 900;
+  font-size: 15px;
+  line-height: 2;
+  filter: drop-shadow(0px 1px 4px rgba(0, 0, 0, 0.25));
+`;

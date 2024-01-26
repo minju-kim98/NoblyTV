@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0b4ccbda8493d630a9f3dbd212bd49d2dadfcbd6b4db08cd3bfd5bd83ce74ba1
-size 242
+import styled from 'styled-components';
+
+const StyledInput = styled.input`
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto;
+  width: 500px;
+  height: 30px;
+  padding: 10px;
+  border-radius: 5px;
+`;
+
+export default StyledInput;
