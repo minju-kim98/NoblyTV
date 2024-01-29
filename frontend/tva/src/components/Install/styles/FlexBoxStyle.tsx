@@ -1,3 +1,11 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:681f8d18e40c85c46e81e1da311e08889cf7e6a503f01947bc432f5d49174ed5
-size 210
+import styled from 'styled-components';
+
+const FlexBoxStyle = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: auto;
+`;
+
+export default FlexBoxStyle;
