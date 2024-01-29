@@ -1,3 +1,11 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:914f8bd9109b3d79242fb7501842a13b3643c5e16ba8546503db30bbcc502626
-size 229
+package BACKEND.project.dto;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.Data;
+
+@Data
+@JsonInclude(JsonInclude.Include.NON_NULL)
+public class FamilyRelationDto {
+
+    private OldUserInfoDto oldUserInfo;
+}
