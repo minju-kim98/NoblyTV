@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4fa2f2bcb278e6843c35d69f630852ae385ee5909f52006c41dc3f8fff5e4160
-size 583
+package BACKEND.project.repository;
+
+import BACKEND.project.domain.FamilyRelation;
+import BACKEND.project.domain.FamilyUserInfo;
+import BACKEND.project.domain.OldUserInfo;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+
+@Repository
+public interface FamilyRelationRepository extends JpaRepository<FamilyRelation, Long> {
+    boolean existsByOldUserInfoAndFamilyUserInfo(OldUserInfo oldUser, FamilyUserInfo familyUser);
+}
