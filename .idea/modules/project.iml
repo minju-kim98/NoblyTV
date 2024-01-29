@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9cd844cb7cc07d1770ad00a9b1d26534a089227a93790a3db5733282584f4a4a
-size 205
+<?xml version="1.0" encoding="UTF-8"?>
+<module version="4">
+  <component name="SonarLintModuleSettings">
+    <option name="uniqueId" value="7bad0780-fcc2-47bc-9ca7-db4a22f055e8" />
+  </component>
+</module>
