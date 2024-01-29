@@ -1,17 +1,3 @@
-import QRCode from 'qrcode.react';
-
-import RightBoxStyle from './styles/RightBoxStyle';
-
-function RightBox() {
-  const Url = 'http://i10c103.p.ssafy.io:5173/connect-tv';
-
-  return (
-    <RightBoxStyle>
-      <QRCode value={Url} size={256} level="H" />
-
-      <div>QR 코드를 스마트폰으로 스캔하세요</div>
-    </RightBoxStyle>
-  );
-}
-
-export default RightBox;
+version https://git-lfs.github.com/spec/v1
+oid sha256:b2b7c667c6cd47e4cdecc78b33118734848c5e9c602213a7a6f16b508b5cf521
+size 552
