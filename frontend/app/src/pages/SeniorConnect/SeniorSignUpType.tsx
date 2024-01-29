@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7e52fd47a6d1769ccdca328906f2962a94d418bb630465d2ac2a2d74a0934151
-size 391
+export interface SeniorInfoT {
+  userId: string;
+  userName: string;
+  birth: string;
+  lunarSloar: LunarSolar;
+  gender: Gender;
+  medications: string[]; // 또는 medications: Array<string>; 으로 작성 가능
+  medicine: string;
+  medicationTimes: string;
+}
+
+export enum LunarSolar {
+  LUNAR = 'LUNAR',
+  SOLAR = 'SOLAR',
+}
+
+export enum Gender {
+  MALE = 'MALE',
+  FEMALE = 'FEMALE',
+}
