@@ -1,16 +1,3 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import TvLayout from './pages/TvLayout';
-import InstallPage from './pages/Install/InstallPage';
-// App 컴포넌트 내에서 라우터 설정
-function App() {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<InstallPage />} />
-        <Route path="/tv" element={<TvLayout />} />
-      </Routes>
-    </Router>
-  );
-}
-
-export default App;
+version https://git-lfs.github.com/spec/v1
+oid sha256:ae011ebe9511ac9a8d9abe9cdbdfcaa4886d3babe470874dfc8dcbb4431549a7
+size 463
