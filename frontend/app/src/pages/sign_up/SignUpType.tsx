@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1951e7811b301964f8ace8210d5fdc45f66916e5536e9f223652f0af70a265f2
-size 274
+interface UserInfoT {
+  userId: string;
+  userName: string;
+  password: string;
+  lunarSloar: LunarSolar;
+  birth: string;
+  oldUserId: string[];
+}
+
+enum LunarSolar {
+  Lunar = 'Lunar',
+  Solar = 'Solar',
+}
+
+export type { UserInfoT };
+export { LunarSolar };

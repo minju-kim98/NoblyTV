@@ -1,11 +1,3 @@
-package BACKEND.project.repository;
-
-import BACKEND.project.domain.TvCode;
-import org.springframework.data.jpa.repository.JpaRepository;
-
-import java.util.Optional;
-
-public interface TvCodeRepository extends JpaRepository<TvCode, Long> {
-    Optional<TvCode> findByCode(String code);
-    boolean existsByCode(String code);
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0e179a04d4e16bcb3d8b0575ef570eb56eebe4d40a43256818a7df2795c8372e
+size 325
