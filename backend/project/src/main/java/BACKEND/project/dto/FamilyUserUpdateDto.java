@@ -1,3 +1,26 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:fd87ecbbfae36dce6cfc9c2773e7a08a17e272997e1b95b6de83013519b5fde8
-size 481
+package BACKEND.project.dto;
+
+import BACKEND.project.domain.FamilyUserInfo;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.time.LocalDate;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class FamilyUserUpdateDto {
+
+    private String userId;
+
+    private String password;
+
+    private String confirmPassword;
+
+    private String username;
+
+    private LocalDate birth;
+
+    private FamilyUserInfo.LunarSolar lunarSolar;
+}
