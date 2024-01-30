@@ -1,19 +1,3 @@
-import {
-  HeaderBgS,
-  SeniorNameS,
-  SeniorTitleS,
-  NoticeIconS,
-} from './HeaderStyle';
-
-function Header() {
-  return (
-    <div>
-      <HeaderBgS>
-        <SeniorNameS to="/select-senior">이세종</SeniorNameS>
-        <SeniorTitleS>어르신</SeniorTitleS>
-        <NoticeIconS to="/alarm" />
-      </HeaderBgS>
-    </div>
-  );
-}
-export default Header;
+version https://git-lfs.github.com/spec/v1
+oid sha256:646a0062c8930666357a6c0b5360ae6a2e226ef8bd5180340abb3c70f2cd572b
+size 379
