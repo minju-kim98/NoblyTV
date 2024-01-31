@@ -1,24 +1,3 @@
-import {
-  ModalBgS,
-  ModalBoxS,
-  ModalTitleS,
-  ModalContentsS,
-  ModalButtonS,
-} from './ModalStyle';
-import ModalProps from './ModalType';
-
-function Modal({ modalContents }: ModalProps) {
-  return (
-    <div>
-      <ModalBgS>
-        <ModalBoxS>
-          <ModalTitleS>경고</ModalTitleS>
-          <ModalContentsS>{modalContents}</ModalContentsS>
-          <ModalButtonS> 확인</ModalButtonS>
-        </ModalBoxS>
-      </ModalBgS>
-    </div>
-  );
-}
-
-export default Modal;
+version https://git-lfs.github.com/spec/v1
+oid sha256:3687aa46e3c1c1142bb98a1f4d277044395bb4fd0783dec37f85a893ba3488c3
+size 628
