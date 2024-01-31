@@ -1,23 +1,3 @@
-interface SeniorInfoT {
-  userId: string;
-  userName: string;
-  birth: string;
-  lunarSloar: LunarSolar;
-  gender: Gender;
-  medications: string[]; // 또는 medications: Array<string>; 으로 작성 가능
-  medicine: string;
-  medicationTimes: string;
-}
-
-enum LunarSolar {
-  LUNAR = 'LUNAR',
-  SOLAR = 'SOLAR',
-}
-
-enum Gender {
-  MALE = 'MALE',
-  FEMALE = 'FEMALE',
-}
-
-export type { SeniorInfoT };
-export { LunarSolar, Gender };
+version https://git-lfs.github.com/spec/v1
+oid sha256:0b28f534545dc101690cb9c043803ee38bbd0f04f8499a8d636db4c4820f2fa4
+size 454
