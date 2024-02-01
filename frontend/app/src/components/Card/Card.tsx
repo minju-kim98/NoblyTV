@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c99030c0d4785958972e89ffe6e6f60f348026dd3291a6643ffc9591a5ab2b29
-size 314
+import Container from './ContainerStyle';
+import CardBody from './CardBody';
+import CardHeader from './CardHeader';
+
+function Card() {
+  return (
+    <>
+      <div style={{ marginTop: '22%' }} />
+      <Container>
+        <CardHeader />
+        <CardBody />
+      </Container>
+    </>
+  );
+}
+
+export default Card;
