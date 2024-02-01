@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:26ab135e1ee5907c62a0827a7592c98fc6966ca87e781485521c53fabe9410f1
-size 313
+import styled from 'styled-components';
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  padding-top: 10px;
+  align-items: center;
+  border-radius: 5px;
+  border: 1px solid;
+  width: 350px;
+  height: 300px;
+  margin: auto;
+`;
+
+export default Container;
