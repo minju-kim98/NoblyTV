@@ -1,9 +1,3 @@
-package BACKEND.project.repository;
-
-import BACKEND.project.domain.Quiz;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
-
-@Repository
-public interface QuizRepository extends JpaRepository<Quiz, Long> {
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:55915bd6e44e86bd2939cb0e791c29f7c332d8eaed28b7985fc10fb9b0c05252
+size 268
