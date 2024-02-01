@@ -1,10 +1,3 @@
-package BACKEND.project.repository;
-
-import BACKEND.project.domain.Gymnastics;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
-
-@Repository
-public interface GymnastcisRepository extends JpaRepository<Gymnastics, Long> {
-    boolean existsByOldUserInfo_userIdAndVideoId(String oldUserId, String videoId);
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:c1acfbc3eb35ae25bf564493dadb09c35541c99a4270da9dafb237091ea87e28
+size 370
