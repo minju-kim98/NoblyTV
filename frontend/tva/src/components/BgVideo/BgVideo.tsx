@@ -1,13 +1,3 @@
-import BgVideoS from './BgVideoStyle';
-
-function BgVideo() {
-  return (
-    <div>
-      <BgVideoS controls>
-        <source src="src/assets/advertisement.mp4" type="video/mp4" />
-      </BgVideoS>
-    </div>
-  );
-}
-
-export default BgVideo;
+version https://git-lfs.github.com/spec/v1
+oid sha256:2f664ab399dff5df452e2c535e34f6be3fcb8a5467ce93461daac1c21670cc74
+size 298
