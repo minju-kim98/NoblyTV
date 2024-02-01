@@ -1,3 +1,5 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6705daa7ddeda26abca2f9f5d09ba938a6047a4566dec1710f3dd53c0b60ebcc
-size 54
+__pycache__
+.ipynb_checkpoints
+.DS_Store
+*.mp4
+*.ckpt
