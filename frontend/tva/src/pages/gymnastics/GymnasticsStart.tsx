@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3835f9dfb7fb042bd0fdef547862a5009483d055cccc832a71b9654d51dfd050
-size 417
+// import { useEffect } from 'react';
+// import { useNavigate } from 'react-router-dom';
+import ChildCenter from '../../components/ChildCenter/ChildCenter';
+
+function GymnasticsStart() {
+  // const navigator = useNavigate();
+  // useEffect(() => {
+  //   navigator('/gymnastics');
+  // }, []);
+  return <ChildCenter ChildCenterContents="할아버지 시작한다!" />;
+}
+
+export default GymnasticsStart;
