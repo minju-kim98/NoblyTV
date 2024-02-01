@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:663bb6493740071b9e7565f5b1276db20bea2175ef747240c796d99fdb9fb838
-size 653
+import Cookies from 'js-cookie';
+
+function manageAuthToken({ handleNavigate }: { handleNavigate: () => void }) {
+  const authToken = Cookies.get('authToken');
+
+  // 토큰이 없으면 로그인 페이지로 이동
+  if (!authToken) {
+    handleNavigate();
+  } else {
+    // 토큰이 있으면 쿠키에 저장 (또는 갱신)
+    Cookies.set('authToken', authToken, { expires: 7 });
+  }
+}
+
+export default manageAuthToken;
