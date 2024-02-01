@@ -1,23 +1,3 @@
-import styled from 'styled-components';
-
-const SmallBtnStyle = styled.button`
-  width: 50px;
-  height: 20px;
-
-  cursor: pointer;
-
-  background: #ff7e7e;
-  border: none;
-  border-radius: 5px;
-  text-decoration: none;
-
-  color: #ffffff;
-  font-size: 15px;
-  text-align: center;
-
-  &:hover {
-    background: #fd6f6f;
-  }
-`;
-
-export default SmallBtnStyle;
+version https://git-lfs.github.com/spec/v1
+oid sha256:37b28d20c639fd6ef740d91bef293dd105c865b33c8d9ea643ae506d73dfedb1
+size 352
