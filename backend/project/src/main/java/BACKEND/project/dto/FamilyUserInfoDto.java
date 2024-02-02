@@ -1,25 +1,3 @@
-package BACKEND.project.dto;
-
-import BACKEND.project.domain.FamilyUserInfo;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import lombok.Data;
-
-import java.time.LocalDate;
-import java.util.List;
-
-@Data
-@JsonInclude(JsonInclude.Include.NON_NULL)
-public class FamilyUserInfoDto {
-
-    private String userId;
-
-    private String password;
-
-    private String username;
-
-    private LocalDate birth;
-
-    private FamilyUserInfo.LunarSolar lunarSolar;
-
-    private List<FamilyRelationDto> familyRelations;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b69e235d8d4936305fefe6dfa6b0a94db8f84c9e076ee6a1e255552c80fd572c
+size 509
