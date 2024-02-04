@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c4709b6b3c2eecb7ecec0fcc7ac6c70adcf06b281dc42fb8c9f1696fb2937a7e
-size 291
+# Summary.
+python summary/run.py \
+    -d /mnt/raid/nia_final/videos \
+    -v /mnt/raid/nia_final/kbs.h5 \
+    -s splits/split_1.json
+
+# Description.
+python description/run.py \
+    -d /mnt/raid/nia_final/videos \
+    -v /mnt/raid/nia_final/kbs.h5 \
+    -s splits/split_1.json \
+    -bs 128
