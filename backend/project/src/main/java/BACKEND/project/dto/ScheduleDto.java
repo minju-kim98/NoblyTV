@@ -1,14 +1,3 @@
-package BACKEND.project.dto;
-
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
-import java.time.LocalDateTime;
-
-@Data
-@NoArgsConstructor
-public class ScheduleDto {
-
-    private String schedule;
-    private LocalDateTime scheduleTime;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ecf967945917f7bb5331c4adda5037f087478967195ecf767c09e2d088353f8e
+size 304
