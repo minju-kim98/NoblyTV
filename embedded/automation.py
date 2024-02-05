@@ -1,16 +1,3 @@
-import subprocess
-from conversation.functions_resources import sendMode
-
-mode = input()
-
-if mode == "diary":
-    sendMode("diary")
-    subprocess.run(["python3.8", "./conversation/diary.py"])
-
-elif mode == "quiz":
-    sendMode("quiz")
-    subprocess.run(["python3.8", "./conversation/quiz.py"])
-
-elif mode == "gymnastic":
-    sendMode("gymnastic")
-    subprocess.run(["python3.8", "./gymnastics.py"])
+version https://git-lfs.github.com/spec/v1
+oid sha256:3db5e7a08e72bf7b39ef3990724c220d671c71f7d3902e2374732151de3be771
+size 395

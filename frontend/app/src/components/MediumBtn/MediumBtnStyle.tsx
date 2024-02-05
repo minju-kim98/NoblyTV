@@ -1,19 +1,3 @@
-import styled from 'styled-components';
-
-const MediumBtnStyle = styled.div<{ $mediumBtnColor?: string }>`
-  width: 50px;
-  height: 30px;
-
-  cursor: pointer;
-
-  background: ${props => props.$mediumBtnColor || '#666666'};
-  border-radius: 5px;
-
-  color: #ffffff;
-  font-size: 16px;
-  font-weight: 900;
-  line-height: 1.85;
-  text-align: center;
-`;
-
-export default MediumBtnStyle;
+version https://git-lfs.github.com/spec/v1
+oid sha256:1edbda9b4ce05fab47a1500f9df02c3a681f1ede48abcce7ba06ac2eb04251d8
+size 397
