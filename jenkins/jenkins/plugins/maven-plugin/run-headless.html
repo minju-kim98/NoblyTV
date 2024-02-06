@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4a88d270134e5faa6453cfe26e61c13f025a47f6138b222226ce4fc5e9005602
-size 440
+<div>
+  <p>
+  If a build doesn't require access to desktop (only using command line tools and tests) this option can be checked.
+  <p>
+  This option allows Jenkins to configure the build process in headless mode 
+  by adding <code>-Djava.awt.headless=true</code> to <code>MAVEN_OPTS</code>. 
+  This is usefull on OSX to avoid Dock icons taking focus. This option may also in future releases be used to select adequate agent instance.
+</div>
