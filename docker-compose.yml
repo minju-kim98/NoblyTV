@@ -1,21 +1,3 @@
-version: '3'
-services:
-  sdb:
-    image: mariadb
-    environment:
-      MYSQL_ROOT_PASSWORD: 1234
-      MYSQL_DATABASE: project
-    ports:
-      - "3309:3306"
-  sapi:
-    build: 
-      context: ./backend/project/
-      dockerfile: dockerfile
-    ports:
-      - "8888:8080"
-  sweb:
-    build: 
-      context: ./frontend/app/
-      dockerfile: dockerfile
-    ports:
-      - "3001:3000"
+version https://git-lfs.github.com/spec/v1
+oid sha256:4894b959d22a82f1ba43480a28b459230390bff522b03fdc6cfe6c5b4f731d51
+size 384
