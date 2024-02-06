@@ -1,16 +1,3 @@
-import BgVideoS from './BgVideoStyle';
-
-interface BgVideoProps {
-  muted: boolean;
-}
-function BgVideo({ muted }: BgVideoProps) {
-  return (
-    <div>
-      <BgVideoS controls autoPlay muted={muted} loop>
-        <source src="src/assets/news.mp4" type="video/mp4" />
-      </BgVideoS>
-    </div>
-  );
-}
-
-export default BgVideo;
+version https://git-lfs.github.com/spec/v1
+oid sha256:517523b17b24cd9dc8610abcc7ddcb0d60789def9696aa59299f6a27d5b8df9d
+size 578
