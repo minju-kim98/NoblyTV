@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9537e5174d4c17a7039afd2913f9477a458e57b0abb6ecda682b04faaba367ee
-size 367
+package BACKEND.project.repository;
+
+import BACKEND.project.domain.Medication;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+
+@Repository
+public interface MedicationRepository extends JpaRepository<Medication, Long> {
+    List<Medication> findAllByMedicationTimeIsNotNull();
+}
