@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:950865a93ac903bdc6292b9937d12b362cb80e6ce62bdf07cec2adfb9d8bab17
-size 443
+package BACKEND.project.repository;
+
+import BACKEND.project.domain.FamilyUserInfo;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.Optional;
+
+@Repository
+public interface FamilyUserRepository extends JpaRepository<FamilyUserInfo, Long> {
+    Optional<FamilyUserInfo> findByUserId(String userId);
+
+    Optional<FamilyUserInfo> findByUsername(String username);
+}
