@@ -1,14 +1,3 @@
-version: '3'
-
-services:
-  jenkins:
-    image: jenkins/jenkins:latest
-    container_name: jenkins
-    ports:
-      - "8088:8080"
-      - "50000:50000"
-    volumes:
-      - ./jenkins:/var/jenkins_home
-      - /usr/bin/docker:/usr/bin/docker
-      - /var/run/docker.sock:/var/run/docker.sock
-    user: root
+version https://git-lfs.github.com/spec/v1
+oid sha256:89d08bc9d023e3753f97e9cfde8bb81720736ed70108ac965bdca7cad72d6371
+size 289
