@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:fa6f1c53ef4d18c56fdbef8170dad8983ee23a837cd79a532f0db86853dcbab0
-size 450
+version: '3'
+
+services:
+  jenkins:
+    image: jenkins/jenkins:latest
+    container_name: jenkins
+    ports:
+      - "8088:8080"
+      - "50000:50000"
+    volumes:
+      - ./jenkins:/var/jenkins_home
+      - /usr/bin/docker:/usr/bin/docker
+      - /var/run/docker.sock:/var/run/docker.sock
+
+# 추가: 이미지를 제거할 때 사용할 네트워크 이름 설정
+networks:
+  default:
+    external:
+      name: jenkins_default
