@@ -1,3 +1,29 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a025f7ae563335852d5afb025ac798a8e2dc9c68ff900727e1daecbfb874a8cc
-size 542
+version: '3'
+
+services:
+  sdb:
+    image: mariadb
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+      MYSQL_DATABASE: project
+    ports:
+      - "3309:3306"
+  sapi:
+    build: 
+      context: ./backend/project/
+      dockerfile: Dockerfile
+    ports:
+      - "8888:8080"
+  sweb:
+    build: 
+      context: ./frontend/app/
+      dockerfile: Dockerfile
+    ports:
+      - "3001:3000"
+
+volumes:
+  cleanup:
+    external: true
+  scripts:
+    driver: local
+    name: "${PWD}/scripts"
