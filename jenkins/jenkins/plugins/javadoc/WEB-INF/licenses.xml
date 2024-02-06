@@ -1,3 +1,2 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f75e9a5df4d1d5964ee5de48a6cbc5a1e8591093bc48fee584306ddfbb5e1f62
-size 510
+<?xml version='1.0' encoding='UTF-8'?>
+<l:dependencies xmlns:l='licenses' groupId='org.jenkins-ci.plugins' artifactId='javadoc' version='243.vb_b_503b_b_45537'><l:dependency name='Javadoc Plugin' groupId='org.jenkins-ci.plugins' artifactId='javadoc' version='243.vb_b_503b_b_45537' url='https://github.com/jenkinsci/javadoc-plugin'><l:description>The Jenkins Plugins Parent POM Project</l:description><l:license name='The MIT license' url='https://opensource.org/licenses/MIT'/></l:dependency></l:dependencies>
