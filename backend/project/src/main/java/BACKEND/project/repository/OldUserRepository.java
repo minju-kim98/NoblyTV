@@ -1,15 +1,3 @@
-package BACKEND.project.repository;
-
-import BACKEND.project.domain.OldUserInfo;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
-
-import java.util.Optional;
-
-@Repository
-public interface OldUserRepository extends JpaRepository<OldUserInfo, Long> {
-    Optional<OldUserInfo> findByUserId(String userId);
-    Optional<OldUserInfo> findById(Long id);
-}
-
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:8396063ffb290032470f864fc4b27ba786dc09781b0dd8d9039b26373aea9139
+size 415
