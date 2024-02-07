@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:98fa150552765535fc739a806b9782ab0de35933d948beb243281140064e9289
-size 230
+package BACKEND.project.dto;
+
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+public class FamilyRelationResponseDto {
+
+    private Long id;
+    private String userId;
+    private String username;
+}
