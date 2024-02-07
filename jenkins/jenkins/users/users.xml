@@ -1,10 +1,3 @@
-<?xml version='1.1' encoding='UTF-8'?>
-<hudson.model.UserIdMapper>
-  <version>1</version>
-  <idToDirectoryNameMap class="concurrent-hash-map">
-    <entry>
-      <string>c103</string>
-      <string>c103_6202862575920495645</string>
-    </entry>
-  </idToDirectoryNameMap>
-</hudson.model.UserIdMapper>
+version https://git-lfs.github.com/spec/v1
+oid sha256:e0ed5a813c056dccba335b6f7d5ea42ab182c26fa38860818aadadba4cc975c3
+size 298
