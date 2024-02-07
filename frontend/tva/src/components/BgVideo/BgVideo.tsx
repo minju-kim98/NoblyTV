@@ -1,16 +1,3 @@
-import BgVideoS from './BgVideoStyle';
-
-function BgVideo() {
-  return (
-    <div>
-      <BgVideoS controls>
-        <source
-          src="src/assets/Samsung_social_contribution.mp4"
-          type="video/mp4"
-        />
-      </BgVideoS>
-    </div>
-  );
-}
-
-export default BgVideo;
+version https://git-lfs.github.com/spec/v1
+oid sha256:8c19c16b935b5c1bbbbfdc86bf10e7b99d69737652b1fc36f232681ea6ab1dfd
+size 827
