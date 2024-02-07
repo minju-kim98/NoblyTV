@@ -1,3 +1,5 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:848fe4b85b5a1cb5eee8efbd42c956baf11523e6024f7fbd95b631e2c4865a2d
-size 130
+<?xml version='1.1' encoding='UTF-8'?>
+<hudson.model.Queue_-State>
+  <counter>15</counter>
+  <items/>
+</hudson.model.Queue_-State>
