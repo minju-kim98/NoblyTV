@@ -1,3 +1,31 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:384376421cccbc20533d4847a2885e8086e3008067536e6ea9cd041c7cfa5d87
-size 674
+version: '3'
+
+services:
+  sapi:
+    build: 
+      context: ./backend/project/
+      dockerfile: Dockerfile
+    ports:
+      - "8888:8080"
+    networks:
+      - snet
+  sweb:
+    build: 
+      context: ./frontend/app/
+      dockerfile: Dockerfile
+    ports:
+      - "3001:3000"
+    networks:
+      - snet
+
+  nginx-file-server:
+  image: nginx
+  volumes:
+    - ./videos:/usr/share/nginx/html:ro
+  ports:
+    - "8001:80"
+  networks:
+    - snet
+
+networks:
+  snet:
