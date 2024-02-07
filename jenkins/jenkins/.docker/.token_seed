@@ -1,3 +1,5 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:31cb7a69683e9f07ef84682bce50ccf39d355eb1380962d08cccaae9e9f57714
-size 74
+{
+  "registry-1.docker.io": {
+    "Seed": "7s1Ql3ZhNkTD8GGhzJ0hPQ=="
+  }
+}
