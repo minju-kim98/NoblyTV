@@ -1,21 +1,3 @@
-import Cookies from 'js-cookie';
-import {
-  HeaderBgS,
-  SeniorNameS,
-  SeniorTitleS,
-  NoticeIconS,
-} from './HeaderStyle';
-
-function Header() {
-  const oldUsername = Cookies.get('oldUsername');
-  return (
-    <div>
-      <HeaderBgS>
-        <SeniorNameS to="/select-senior">{oldUsername}</SeniorNameS>
-        <SeniorTitleS>어르신</SeniorTitleS>
-        <NoticeIconS to="/alarm" />
-      </HeaderBgS>
-    </div>
-  );
-}
-export default Header;
+version https://git-lfs.github.com/spec/v1
+oid sha256:fe9641bf7abc804b0aa7814cae1c4dedb0ea17c1989c165589b32b70bc377bc3
+size 588
