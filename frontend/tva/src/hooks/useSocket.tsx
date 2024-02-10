@@ -1,19 +1,3 @@
-import { useEffect, useState } from 'react';
-import { io, Socket } from 'socket.io-client';
-
-function useSocket(url: string): Socket | null {
-  const [socket, setSocket] = useState<Socket | null>(null);
-
-  useEffect(() => {
-    const socketIo = io(url);
-
-    setSocket(socketIo);
-
-    return () => {};
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  return socket;
-}
-
-export default useSocket;
+version https://git-lfs.github.com/spec/v1
+oid sha256:e8a1eaf26ca622b3077ef2bba15d940bb8b76594639e84d7f86623b34fe16df9
+size 419
