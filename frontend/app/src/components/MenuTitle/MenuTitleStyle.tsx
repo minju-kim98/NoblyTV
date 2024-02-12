@@ -1,12 +1,3 @@
-import styled from 'styled-components';
-
-const MenuTitleStyle = styled.div`
-  color: #666666;
-  font-weight: 900;
-  font-size: 32px;
-  text-align: center;
-  line-height: 2;
-  filter: drop-shadow(0px 1px 4px rgba(0, 0, 0, 0.25));
-`;
-
-export default MenuTitleStyle;
+version https://git-lfs.github.com/spec/v1
+oid sha256:7b2221740b369be967d38d545751a037d1480bd6570f45b8ba911d0a8a4278a3
+size 276
