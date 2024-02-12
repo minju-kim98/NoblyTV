@@ -1,14 +1,3 @@
-import { Link } from 'react-router-dom';
-import styled from 'styled-components';
-
-const AddSeniorS = styled(Link)`
-  margin: 0 auto 10vh auto;
-
-  text-align: center;
-  color: #666666;
-  font-size: 1.3em;
-  font-weight: 900;
-  text-decoration: none;
-`;
-
-export default AddSeniorS;
+version https://git-lfs.github.com/spec/v1
+oid sha256:04f160627d9b6490d5f6437910456bc890b09d9ba841fe814406e7a3502bd24f
+size 294
