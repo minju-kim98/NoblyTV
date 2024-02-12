@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:287e257837ec66372a7af21525fa797f2394f0987656bae513418b139e356c12
-size 403
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your App Title</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+</head>
+<body>
+  <h1>Live Video Streaming</h1>
+  <img src="{{ url_for('video_feed') }}" width="640" height="480" />
+</body>
+</html>
