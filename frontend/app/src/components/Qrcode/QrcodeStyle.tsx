@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7ea72f5db91eafd5012ef777db09c9728cdc828e5adb76f27652f44c90c91a59
-size 380
+import styled from 'styled-components';
+
+const QrcodeContainerS = styled.div`
+  margin: 0 auto;
+  width: 200px;
+  height: 200px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+`;
+
+const QrcodeTextS = styled.div`
+  color: #666666;
+  font-weight: 900;
+  font-size: 32px;
+  text-align: center;
+  line-height: 2;
+`;
+export { QrcodeContainerS, QrcodeTextS };
