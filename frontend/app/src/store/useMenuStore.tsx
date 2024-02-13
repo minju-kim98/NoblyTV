@@ -1,21 +1,3 @@
-import Cookies from 'js-cookie';
-import { create } from 'zustand';
-
-interface MenuStoreState {
-  nowMenu: string;
-  setNowMenu: (setData: string) => void;
-}
-
-const useMenuStore = create<MenuStoreState>(set => ({
-  nowMenu: Cookies.get('nowMenu') || 'Community',
-  setNowMenu: setData => {
-    if (!setData) {
-      Cookies.remove('nowMenu');
-    } else {
-      Cookies.set('nowMenu', setData, { expires: 7 });
-    }
-    set({ nowMenu: setData });
-  },
-}));
-
-export default useMenuStore;
+version https://git-lfs.github.com/spec/v1
+oid sha256:6a16d1c42ad4045e731dd490e05c913344d7a69f432e724d85a6b9ea5e56620a
+size 508
