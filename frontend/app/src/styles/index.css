@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f75fb33b571e2b946da97fcaa9189354ca6fd4eb8f5dc9d28a0e03430091f21f
-size 420
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 16px;
+}
+
+/* CSS로 우클릭 비활성화 */
+img {
+  pointer-events: none;
+  -webkit-user-drag: none;
+  user-select: none; /* 일부 브라우저를 위한 대체 속성 */
+  -moz-user-select: none; /* Firefox를 위한 대체 속성 */
+  -ms-user-select: none; /* Internet Explorer를 위한 대체 속성 */
+  -webkit-touch-callout: none;
+}

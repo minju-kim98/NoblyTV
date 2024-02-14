@@ -1,15 +1,3 @@
-import React from 'react';
-import BgVideo from './BgVideo';
-
-interface BgVideoComponentProps {
-  currentMode: string;
-}
-
-function BgVideoComponent({ currentMode }: BgVideoComponentProps) {
-  return <BgVideo currentMode={currentMode} />;
-}
-
-// 컴포넌트를 React.memo로 감싼 후 export
-const MemoizedBgVideoComponent = React.memo(BgVideoComponent);
-
-export default MemoizedBgVideoComponent;
+version https://git-lfs.github.com/spec/v1
+oid sha256:f03c097c5f286ebbc1337201a2fe3a3821e594408b5834f4880c9668c5f6a0bf
+size 411
