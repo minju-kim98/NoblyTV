@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:69e66e6c22a56f37900b325c50fbe6dc8cd0f90ecaf1c0b02acea64d82dc2d78
-size 306
+package BACKEND.project.dto;
+
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+
+@Data
+@NoArgsConstructor
+public class ScheduleDto {
+
+    private String schedule;
+
+    private LocalDateTime scheduleDay;
+
+    private LocalTime scheduleTime;
+}

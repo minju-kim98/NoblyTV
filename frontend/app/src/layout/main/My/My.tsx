@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c15079c18f086c3152ff307c97a69a2ea3055a3199d25563b0fbda694cd6d436
-size 1447
+import { useState } from 'react';
+import MyMain from './layout/MyMain/MyMain';
+import SettingTv from './layout/SettingTv/SettingTv';
+import { PATH_MY_MAIN, PATH_SETTING_TV } from '../../../constants/constants';
+
+function My() {
+  const [myMenu, setMyMenu] = useState<string>('MyMain');
+  return (
+    <div>
+      {myMenu === PATH_MY_MAIN && <MyMain setMyMenu={setMyMenu} />}
+      {myMenu === PATH_SETTING_TV && <SettingTv setMyMenu={setMyMenu} />}
+    </div>
+  );
+}
+
+export default My;

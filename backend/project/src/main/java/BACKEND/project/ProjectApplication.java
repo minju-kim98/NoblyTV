@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:485369825e2505969f86687f8834cf6bc9fe986526a32ecee86cc41191d375d1
-size 393
+package BACKEND.project;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.scheduling.annotation.EnableScheduling;
+
+@SpringBootApplication
+@EnableScheduling
+public class ProjectApplication {
+	public static void main(String[] args) {
+		SpringApplication.run(ProjectApplication.class, args);
+	}
+}
