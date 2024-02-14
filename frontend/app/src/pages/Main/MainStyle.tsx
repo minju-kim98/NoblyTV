@@ -1,11 +1,3 @@
-import styled from 'styled-components';
-
-const MainBoxS = styled.div`
-  position: fixed;
-  top: 55px;
-  left: 0px;
-  width: 100vw;
-  height: calc(100vh - 145px);
-`;
-
-export default MainBoxS;
+version https://git-lfs.github.com/spec/v1
+oid sha256:fd849260d364cac3e90aa554ddd56f5d513500fc294d06f8cbfd056265fdc4e7
+size 202

@@ -1,22 +1,3 @@
-package BACKEND.project.domain;
-
-import jakarta.persistence.*;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-
-@Getter
-@Setter
-@NoArgsConstructor
-@EqualsAndHashCode(of = "id")
-@Entity
-public class TvCode {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    @Column(nullable = false, unique = true)
-    private String tvCode;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:16859232816895541f484dbe5825a880db890f6a90b32f19740ad9a24a9910aa
+size 430
