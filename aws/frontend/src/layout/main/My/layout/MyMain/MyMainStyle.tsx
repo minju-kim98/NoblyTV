@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:aec55fdcb41636a632be793f28fa72171fa3e9483d8aa4230877c54348714c5c
-size 356
+import styled from 'styled-components';
+
+const MyBoxS = styled.div`
+  width: 90%;
+  max-width: 350px;
+  margin: 0 auto;
+`;
+
+const MyCardS = styled.div`
+  width: 100%;
+  border-bottom: 1px solid #888888;
+  margin-bottom: 20px;
+  padding: 10px 0;
+
+  font-weight: 500;
+  font-size: 1.2em;
+  color: #666666;
+`;
+
+export { MyBoxS, MyCardS };
