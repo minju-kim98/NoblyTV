@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:da4ec6187e1f1200ab63c7c983bd6c13548e44c43cb4752b2792fbd2e99156d9
-size 308
+import styled from 'styled-components';
+
+const BackBtnStyle = styled.div`
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 30px;
+  height: 30px;
+  background-image: url('/icon/icon_back_btn.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+`;
+
+export default BackBtnStyle;
