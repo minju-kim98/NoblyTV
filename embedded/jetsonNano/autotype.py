@@ -1,3 +1,11 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:454528dfb021dbdabfbd1092672beb827216412981ccdd04a1ad3b875f0a7dca
-size 220
+import subprocess
+from conversation.functions_resources import sendMode, sendData, remainedVideo, sendType
+
+mode = input()
+
+if mode == "news":
+    sendType("news")
+
+elif mode == "commercial":
+    sendMode("commercial")
+
