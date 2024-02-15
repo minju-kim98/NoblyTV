@@ -1,16 +1,3 @@
-import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
-import Overlay from './pages/Overlay/Overlay';
-import SignInTV from './pages/SignInTV/SignInTV';
-// App 컴포넌트 내에서 라우터 설정
-function App() {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Overlay />} />
-        <Route path="/sign-in" element={<SignInTV />} />
-      </Routes>
-    </Router>
-  );
-}
-
-export default App;
+version https://git-lfs.github.com/spec/v1
+oid sha256:b4af50158dfca63c126c35aa700c9d3ea2d35dc80c070d212021cbff61a2640f
+size 980
