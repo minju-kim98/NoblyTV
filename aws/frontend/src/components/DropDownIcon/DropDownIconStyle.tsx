@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b8e07dfcf301d68b73b3dfaacb8e079c33a112c5a9213d1ac9194d3120ed3d94
-size 281
+import styled from 'styled-components';
+
+const DropDownIcon = styled.div`
+  margin: auto 5px 17px 0;
+  width: 10px;
+  height: 10px;
+  background: url('/icon/icon_dropdown.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+`;
+
+export default DropDownIcon;
