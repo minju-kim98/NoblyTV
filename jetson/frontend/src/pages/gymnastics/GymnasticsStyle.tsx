@@ -1,3 +1,23 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b1c813d0babde93844bdddb015ffd966ec79af2f2f3cb99770dd1c8f6f2acb90
-size 464
+// tva/src/pages/gymnastics/GymnasticsStyle.tsx
+import styled, { keyframes } from 'styled-components';
+
+const slideInFromLeft = keyframes`
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+`;
+
+const GymnasticsContainer = styled.div`
+  animation: ${slideInFromLeft} 1.8s forwards;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  overflow: hidden;
+`;
+
+export default GymnasticsContainer;
