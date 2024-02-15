@@ -1,20 +1,3 @@
-import styled from 'styled-components';
-
-const BgImgStyle = styled.div`
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  width: 100vw;
-  height: 100vh;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: column;
-
-  background: url('/src/assets/bg_img.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-`;
-
-export default BgImgStyle;
+version https://git-lfs.github.com/spec/v1
+oid sha256:082fe5f01370a86bbea73ba7a0875d45f81bbc639251e00befca3ef8fdf9dce2
+size 405
