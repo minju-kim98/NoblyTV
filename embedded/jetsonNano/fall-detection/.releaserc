@@ -1,3 +1,30 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c51574f78b8999970206ce93bf3c058c5c6d1aa3e6e5f8a588968989f0bdaaa2
-size 788
+{
+    "branches": ["main", "master"],
+    "plugins": [
+        "@semantic-release/commit-analyzer",
+        "@semantic-release/release-notes-generator",
+        [
+            "@semantic-release/changelog",
+            {
+                "changelogFile": "CHANGELOG.md",
+                "changelogTitle": "# Semantic Versioning Changelog"
+            }
+        ],
+        [
+            "@semantic-release/exec",
+            {
+                "prepareCmd": "./build/prepare-semantic-release.sh ${nextRelease.version}"
+            }
+        ],
+        [
+            "@semantic-release/git",
+            {
+                "assets": [
+                    "CHANGELOG.md",
+                    "src/setup.cfg"
+                ]
+            }
+        ],
+        "@semantic-release/github",
+    ]
+}

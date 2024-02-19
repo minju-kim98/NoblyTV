@@ -1,3 +1,26 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:47e4b768f1b78469e0fbaf61502435eaa9a276104a150345ef1bbbaaa4d88086
-size 606
+import useModalContentsStore from '../../store/useModalContents';
+import {
+  ModalBgS,
+  ModalBoxS,
+  ModalContentsS,
+  ModalButtonS,
+} from './ModalStyle';
+
+function Modal() {
+  const { modalContents, setModalContents } = useModalContentsStore();
+  const handleBtnClick = () => {
+    setModalContents('');
+  };
+  return (
+    <div>
+      <ModalBgS onClick={handleBtnClick}>
+        <ModalBoxS>
+          <ModalContentsS>{modalContents}</ModalContentsS>
+          <ModalButtonS onClick={handleBtnClick}> 확인</ModalButtonS>
+        </ModalBoxS>
+      </ModalBgS>
+    </div>
+  );
+}
+
+export default Modal;

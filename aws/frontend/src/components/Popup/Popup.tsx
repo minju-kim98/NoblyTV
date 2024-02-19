@@ -1,3 +1,22 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:501691ea2f23c8a0e4fc26882a1fdbcc35d47192d15d439b803e512cf45f2d03
-size 743
+import useMenuStore from '../../store/useMenuStore';
+import usePopupContentsStore from '../../store/usePopupContents';
+import useRedirectStore from '../../store/useRedirectStore';
+import { PopupBoxS, PopupContentsS, PopupTitleS } from './PopupStyle';
+
+function Popup() {
+  const { popupContents, setPopupContents } = usePopupContentsStore();
+  const { setNowMenu } = useMenuStore();
+  const { redirectPath } = useRedirectStore();
+  const handleBtnClick = () => {
+    setNowMenu(redirectPath);
+    setPopupContents('');
+  };
+  return (
+    <PopupBoxS $isPopup={popupContents} onClick={handleBtnClick}>
+      <PopupTitleS>알림</PopupTitleS>
+      <PopupContentsS>{popupContents}</PopupContentsS>
+    </PopupBoxS>
+  );
+}
+
+export default Popup;

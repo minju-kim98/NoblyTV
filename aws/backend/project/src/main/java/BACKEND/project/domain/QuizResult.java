@@ -1,3 +1,33 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ba79508bd81d0551f5044b2f8e77e3d755e92ffc45892c43daa944698dc0e3e3
-size 681
+package BACKEND.project.domain;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import jakarta.persistence.*;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@EqualsAndHashCode(of = "id")
+@Entity
+public class QuizResult {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @ManyToOne
+    @JoinColumn(name = "quiz_id")
+    @JsonBackReference
+    private Quiz quiz;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    @JsonBackReference
+    private OldUserInfo user;
+
+    @Column(nullable = false)
+    private boolean isCorrect;
+}

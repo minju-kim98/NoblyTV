@@ -1,3 +1,40 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1e15cd90cadb61b2fa377511f71901eea2a637fcf0b55c2b70c36a4f4324b744
-size 942
+from conversation.functions_resources import sendMode, sendData
+prompt="""1. mode
+2. message
+3. ('mode', 'diary')
+4. ('mode', 'quiz')
+5. ('mode', 'gymnastic')
+6. ('message', 'start)
+7. ('message','stop')
+8. ('message','post up')
+0. quit
+"""
+
+while True:
+    try:
+        mode = int(input(prompt))
+
+        if mode == 1:
+            text = input("text to send")
+            sendMode(text)
+        elif mode == 2:
+            text = input("text to send")
+            sendData(text)
+        elif mode == 3:
+            sendMode("diary")
+        elif mode == 4:
+            sendMode("quiz")
+        elif mode == 5:
+            sendMode("gymnastic")
+        elif mode == 6:
+            sendData("start")
+        elif mode == 7:
+            sendData("stop")
+        elif mode == 8:
+            sendData("post up")
+        elif mode == 0:
+            break 
+        else:
+            print("invalid input")
+    except:
+        print("invalid input")

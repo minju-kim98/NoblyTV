@@ -1,3 +1,54 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1361f619aeef28103ca5631b4dc89090ae55c7ae644a968cbe6691401718e7a3
-size 1431
+import { create } from 'zustand';
+import Cookies from 'js-cookie';
+
+interface UserStoreState {
+  grantType: string;
+  setGrantType: (setData: string) => void;
+  accessToken: string;
+  setAccessToken: (setData: string) => void;
+  refreshToken: string;
+  setRefreshToken: (setData: string) => void;
+  userId: string;
+  setUserId: (setData: string) => void;
+}
+
+const useUserStore = create<UserStoreState>(set => ({
+  grantType: Cookies.get('grantType') || '',
+  setGrantType: setData => {
+    if (!setData) {
+      Cookies.remove('grantType');
+    } else {
+      Cookies.set('grantType', setData, { expires: 7 });
+    }
+    set({ grantType: setData });
+  },
+  accessToken: Cookies.get('accessToken') || '',
+  setAccessToken: setData => {
+    if (!setData) {
+      Cookies.remove('accessToken');
+    } else {
+      Cookies.set('accessToken', setData, { expires: 7 });
+    }
+    set({ accessToken: setData });
+  },
+  refreshToken: Cookies.get('refreshToken') || '',
+  setRefreshToken: setData => {
+    if (!setData) {
+      Cookies.remove('refreshToken');
+    } else {
+      Cookies.set('refreshToken', setData, { expires: 7 });
+    }
+    set({ refreshToken: setData });
+  },
+  userId: Cookies.get('userId') || '',
+  setUserId: setData => {
+    if (!setData) {
+      Cookies.remove('userId');
+    } else {
+      Cookies.set('userId', setData, { expires: 7 });
+    }
+    set({ userId: setData });
+  },
+}));
+
+export default useUserStore;

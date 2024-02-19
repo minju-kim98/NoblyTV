@@ -1,3 +1,34 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3dc4854becd2fb5cea5c55fa4e0bc03efafdec9339fa9db6bf579bc4de0d8c68
-size 653
+package BACKEND.project.domain;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import jakarta.persistence.*;
+import lombok.*;
+
+import java.time.LocalTime;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@EqualsAndHashCode(of = "id")
+@Entity
+public class Medication {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @ToString.Exclude
+    @JsonBackReference
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "old_user_id")
+    private OldUserInfo oldUser;
+
+    @Column
+    private String medicine;
+
+    @Column
+    private LocalTime medicationTime;
+
+    @Column
+    private boolean isRead = false;
+}

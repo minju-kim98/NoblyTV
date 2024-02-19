@@ -1,3 +1,40 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:10c709537904ebc7f68554540c3bd1a6cd48f9774eb214aef8b385966b823183
-size 692
+import time
+import os
+from conversation.functions_resources import sendMode, remainedVideo
+
+diary_file_path = './conversation/diary.py'
+community_file_path = './conversation/community.py'
+
+time.sleep(5)
+
+# Start
+sendMode("news")
+time.sleep(5)
+sendMode("commercial")
+time.sleep(2)
+
+# diary
+sendMode('diary')
+time.sleep(2)
+os.system(f'python3 {diary_file_path}')
+sendMode('main')
+
+# Show App
+while True:
+    if input() == "continue":
+        break
+
+time.sleep(5)
+# ready for next
+sendMode("news")
+time.sleep(5)
+sendMode("commercial")
+time.sleep(2)
+
+# community
+if remainedVideo() > 0:
+    sendMode('community')
+    time.sleep(2)
+    os.system(f'python3 {community_file_path}')
+
+sendMode('main')

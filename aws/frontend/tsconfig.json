@@ -1,3 +1,30 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:39c5258854fb5e57b07616a28fd9d990b7dd47ad9d33839fa47e57aae801ffaa
-size 746
+{
+  "compilerOptions": {
+    "types": ["vite-plugin-pwa/react"],
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true
+  },
+  "include": [
+    "src",
+    "../../test/frontend/app/Keyword.tsx",
+    "../../test/frontend/app/medicationList.tsx"
+  ],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}

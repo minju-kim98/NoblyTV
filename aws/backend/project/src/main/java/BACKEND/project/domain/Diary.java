@@ -1,3 +1,35 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:263ad6fd1f6b90a58782e6b0b74c1de750fd4d660c164b8aac07a8b86a2dd9d0
-size 702
+package BACKEND.project.domain;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import jakarta.persistence.*;
+import lombok.*;
+import org.hibernate.annotations.CreationTimestamp;
+
+import java.time.LocalDateTime;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@EqualsAndHashCode(of = "id")
+@Entity
+public class Diary {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @CreationTimestamp
+    private LocalDateTime date;
+
+    @Column
+    private String text;
+
+    @Column
+    private String summary;
+
+    @ToString.Exclude
+    @JsonBackReference
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "old_user_id")
+    private OldUserInfo oldUserInfo;
+}
