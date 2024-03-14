@@ -1,3 +1,26 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:94a94d98da460d3aedb549ab68b02ffc79d5c7109a9dc693a384d76b931f9419
-size 547
+{
+  "name": "노블리TV",
+  "short_name": "노블리TV",
+  "description": "노블리TV 웹 앱",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "/logo/logo180.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/logo/logo196.png",
+      "sizes": "196x196",
+      "type": "image/png"
+    },
+    {
+      "src": "/logo/logo512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

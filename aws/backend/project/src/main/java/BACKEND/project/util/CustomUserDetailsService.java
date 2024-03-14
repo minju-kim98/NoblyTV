@@ -1,3 +1,31 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f0837389a13be3a02542e789166decaa46303ebe8e2ba620ce9b4fdf396b89ed
-size 1183
+package BACKEND.project.util;
+
+import BACKEND.project.domain.FamilyUserInfo;
+import BACKEND.project.repository.FamilyUserRepository;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Component;
+
+@RequiredArgsConstructor
+@Component
+@Slf4j
+public class CustomUserDetailsService implements UserDetailsService {
+
+    private final FamilyUserRepository familyUserRepository;
+
+    @Override
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        FamilyUserInfo user = familyUserRepository.findByUserId(username)
+                .orElseThrow(() -> new UsernameNotFoundException("Could not found user " + username));
+
+        return User.builder()
+                .username(user.getUserId())
+                .password(user.getPassword())
+                .roles("FAMILY")
+                .build();
+    }
+}

@@ -1,3 +1,42 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5f96b520b200a0cae9eb4607b583d02c39908a1754aa7d968f514df629c70b74
-size 765
+package BACKEND.project.dto;
+
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import java.time.LocalDateTime;
+
+@Data
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+public class PostDto {
+
+    private Long id;
+
+    private OldUserInfoDto oldUserInfo;
+
+    private FamilyUserInfoDto familyUserInfo;
+
+    private String videoPath;
+
+    private LocalDateTime postedAt;
+
+    private boolean isViewed;
+
+    private String username;
+
+    public FamilyUserInfoDto getFamilyUserInfo() {
+        return familyUserInfo;
+    }
+
+    public void setFamilyUserInfo(FamilyUserInfoDto familyUserInfo) {
+        this.familyUserInfo = familyUserInfo;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+}

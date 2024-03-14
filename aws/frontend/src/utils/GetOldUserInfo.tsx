@@ -1,3 +1,37 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b7b5119f2dad56c6669cd1663d23e7346506d4fc58e40ed3e0bc5508172bdc54
-size 895
+import axios from 'axios';
+import { BASE_URL, API_PORT, API_SENIOR } from '../constants/constants';
+import { OldUserInfoType } from '../types/api_types';
+
+interface GetUserInfoProps {
+  grantType: string;
+  accessToken: string;
+  oldUserId: string;
+  successFunc: (oldUserinfoData: OldUserInfoType) => void;
+  errorFunc?: () => void;
+}
+
+function GetOldUserInfo({
+  grantType,
+  accessToken,
+  oldUserId,
+  successFunc,
+  errorFunc,
+}: GetUserInfoProps) {
+  axios
+    .get(`${BASE_URL}:${API_PORT}${API_SENIOR}/${oldUserId}`, {
+      headers: {
+        Authorization: `${grantType} ${accessToken}`,
+      },
+    })
+    .then(response => {
+      successFunc(response.data as OldUserInfoType);
+    })
+    .catch(error => {
+      console.error('Axios error:', error);
+      if (errorFunc) {
+        errorFunc();
+      }
+    });
+}
+
+export default GetOldUserInfo;

@@ -1,3 +1,39 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2a0c7b6640819a2e53e18f8e3b60c260af5200ac56300ce737f537ccdfc104f4
-size 745
+package BACKEND.project.domain;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import jakarta.persistence.*;
+import lombok.*;
+
+import java.time.LocalDateTime;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@EqualsAndHashCode(of = "id")
+@Entity
+public class Post {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @ManyToOne
+    @JoinColumn(name = "old_user_id")
+    @JsonBackReference
+    private OldUserInfo oldUserInfo;
+
+    @ManyToOne
+    @JoinColumn(name = "family_user_id")
+    @JsonBackReference
+    private FamilyUserInfo familyUserInfo;
+
+    @Column(nullable = false)
+    private String videoPath;
+
+    @Column
+    private LocalDateTime postedAt;
+
+    @Column
+    private boolean isViewed;
+
+}

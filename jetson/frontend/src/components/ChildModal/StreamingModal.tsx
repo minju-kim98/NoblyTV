@@ -1,13 +1,3 @@
-import { ChildModalVideoBG } from './ChildModalStyles';
-
-function StreamingModal() {
-  const streamUrl = 'http://192.168.100.245:5000/video_feed';
-
-  return (
-    <ChildModalVideoBG>
-      <img src={streamUrl} alt="비디오 스트림" style={{ width: '100%' }} />
-    </ChildModalVideoBG>
-  );
-}
-
-export default StreamingModal;
+version https://git-lfs.github.com/spec/v1
+oid sha256:75374f78e4a5d985382ad23020386485cafb48e878c53f1f6792b9a188b258cf
+size 329

@@ -1,3 +1,33 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5b12f432bf4bbbce7e6d799869cd7783dc47f38ea41420fc49b2149025920609
-size 1022
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import { Socket } from 'socket.io-client';
+import { useRef } from 'react';
+import Overlay from './pages/Overlay/Overlay';
+import SignInTV from './pages/SignInTV/SignInTV';
+import useSocket from './hooks/useSocket';
+import { BASE_URL, SOCKET_PORT } from './constants/constants';
+
+// App 컴포넌트 내에서 라우터 설정
+function App() {
+  const socket: Socket | null = useSocket(`${BASE_URL}:${SOCKET_PORT}`);
+
+  const messageSentRef = useRef(false);
+
+  if (socket && !messageSentRef.current) {
+    socket.emit('message', 'give me code');
+    messageSentRef.current = true;
+    // console.log(socket);
+    socket.emit('message', 'connected');
+    console.log(socket.emit('message', 'give me code'));
+  }
+
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Overlay />} />
+        <Route path="/sign-in" element={<SignInTV />} />
+      </Routes>
+    </Router>
+  );
+}
+
+export default App;

@@ -1,3 +1,43 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a390eeeae27731c01c79677ab2f0de3c2aba9fec3471487bbeae4c4e370f99a6
-size 965
+import { useState } from 'react';
+import {
+  DropDownSelectS,
+  DropDownOptionS,
+  DropDownSelectedS,
+  DropDownBoxS,
+} from './DropDownStyle';
+
+function DropDown({
+  initValue,
+  options,
+  setSelected,
+}: {
+  initValue: string;
+  options: string[];
+  setSelected: (value: string) => void;
+}) {
+  const [isClick, setIsClick] = useState<boolean>(false);
+
+  return (
+    <DropDownBoxS>
+      <DropDownSelectedS onClick={() => setIsClick(prev => !prev)}>
+        {initValue}
+      </DropDownSelectedS>
+      <DropDownSelectS>
+        {isClick &&
+          options.map(option => (
+            <DropDownOptionS
+              key={option}
+              onClick={() => {
+                setSelected(option);
+                setIsClick(prev => !prev);
+              }}
+            >
+              {option}
+            </DropDownOptionS>
+          ))}
+      </DropDownSelectS>
+    </DropDownBoxS>
+  );
+}
+
+export default DropDown;

@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:74303f9fa2e20fd4694a4fb4ecb9c55f91b2d3a6504d186fb2ddfa89cb15f3f1
-size 773
+import QRCode from 'qrcode.react';
+import {
+  BASE_PORT,
+  BASE_URL,
+  PATH_SENIOR_CONNECT,
+} from '../../constants/constants';
+import { QrcodeContainerS, QrcodeTextS } from './QrcodeStyle';
+
+function QrCode({ uniqueCode }: { uniqueCode: string }) {
+  const QrValue = `${BASE_URL}:${BASE_PORT}${PATH_SENIOR_CONNECT}?uniqueCode=${encodeURIComponent(uniqueCode)}`;
+  const formattedCode = uniqueCode.toUpperCase();
+  // 4글자씩 나누고 '-'로 이어붙이기
+  const formattedResult = formattedCode.replace(/(\w{4})(\w{4})/, '$1-$2');
+  return (
+    <div>
+      <QrcodeContainerS>
+        <QRCode value={QrValue} size={200} />
+      </QrcodeContainerS>
+      <QrcodeTextS>{formattedResult}</QrcodeTextS>
+    </div>
+  );
+}
+
+export default QrCode;

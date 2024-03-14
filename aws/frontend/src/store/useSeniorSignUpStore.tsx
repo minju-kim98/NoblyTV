@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f0c76f5178e51dbf1a1fa246a863888a5eda9a51758640ab1cd5b0d7f145effb
-size 534
+import { create } from 'zustand';
+import { SeniorSignUpType } from '../types/api_types';
+import { seniorSignUpInit } from '../constants/type_init';
+
+interface SeniorSignUpStoreState {
+  seniorSignUpInfo: SeniorSignUpType;
+  setSeniorSignUpInfo: (setData: SeniorSignUpType) => void;
+}
+
+const useSeniorSignUpStore = create<SeniorSignUpStoreState>(set => ({
+  seniorSignUpInfo: seniorSignUpInit,
+  setSeniorSignUpInfo: setData => {
+    set({ seniorSignUpInfo: setData });
+  },
+}));
+
+export default useSeniorSignUpStore;

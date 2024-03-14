@@ -1,3 +1,27 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7dbb3a7e5b2c9b909ee513b37a10a88b33062e22423737d35ac4e0674d378b84
-size 818
+import { useState } from 'react';
+import { ListBoxS, ListBoxUlS, ListBoxLiS, CheckIconS } from './ListBoxStyle';
+import ListBoxType from './ListBoxType';
+
+function ListBox({ listContents, CheckList }: ListBoxType) {
+  const [checkedName, setCheckedName] = useState<string>('');
+  const handleChecked = (listContent: string) => {
+    setCheckedName(listContent);
+    CheckList(listContent);
+  };
+  return (
+    <ListBoxS>
+      <ListBoxUlS>
+        {listContents.map(listContent => (
+          <ListBoxLiS
+            key={listContent}
+            onClick={() => handleChecked(listContent)}
+          >
+            {listContent}
+            {checkedName === listContent && <CheckIconS />}
+          </ListBoxLiS>
+        ))}
+      </ListBoxUlS>
+    </ListBoxS>
+  );
+}
+export default ListBox;

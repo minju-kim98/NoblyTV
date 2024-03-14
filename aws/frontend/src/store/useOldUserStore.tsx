@@ -1,3 +1,32 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:26af6dd3ff91e21d1f65eeb5ae0b7663aed570e449b5745be94f057cfae702ea
-size 861
+import { create } from 'zustand';
+import Cookies from 'js-cookie';
+
+interface OldUserStoreState {
+  oldUserId: string;
+  setOldUserId: (setData: string) => void;
+  oldUsername: string;
+  setOldUsername: (setData: string) => void;
+}
+
+const useOldUserStore = create<OldUserStoreState>(set => ({
+  oldUserId: Cookies.get('oldUserId') || '',
+  setOldUserId: setData => {
+    if (!setData) {
+      Cookies.remove('oldUserId');
+    } else {
+      Cookies.set('oldUserId', setData, { expires: 7 });
+    }
+    set({ oldUserId: setData });
+  },
+  oldUsername: Cookies.get('oldUsername') || '',
+  setOldUsername: setData => {
+    if (!setData) {
+      Cookies.remove('oldUsername');
+    } else {
+      Cookies.set('oldUsername', setData, { expires: 7 });
+    }
+    set({ oldUsername: setData });
+  },
+}));
+
+export default useOldUserStore;

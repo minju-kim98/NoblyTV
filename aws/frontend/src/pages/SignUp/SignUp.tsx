@@ -1,3 +1,41 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2c6228045d94fcdb8738b4b76f186866b1c69acd5ef37c06271e861290f2abb1
-size 1234
+import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import NameId from '../../layout/sign_up/NameId';
+import Password from '../../layout/sign_up/Password';
+import Birth from '../../layout/sign_up/Birth';
+import {
+  PATH_SIGN_UP_BIRTH,
+  PATH_SIGN_UP_NAME_ID,
+  PATH_SIGN_UP_PASSWORD,
+} from '../../constants/constants';
+import useUserStore from '../../store/useUserStore';
+import useRedirectStore from '../../store/useRedirectStore';
+
+function SignUp() {
+  const navigate = useNavigate();
+  const { accessToken } = useUserStore();
+  const { redirectPath } = useRedirectStore();
+  const [nowSignUp, setNowSignUp] = useState<string>(PATH_SIGN_UP_NAME_ID);
+
+  useEffect(() => {
+    if (accessToken) {
+      navigate(redirectPath);
+    }
+  }, [accessToken, navigate, redirectPath]);
+
+  return (
+    <div>
+      {nowSignUp === PATH_SIGN_UP_NAME_ID && (
+        <NameId setNowSignUp={setNowSignUp} />
+      )}
+      {nowSignUp === PATH_SIGN_UP_PASSWORD && (
+        <Password setNowSignUp={setNowSignUp} />
+      )}
+      {nowSignUp === PATH_SIGN_UP_BIRTH && (
+        <Birth setNowSignUp={setNowSignUp} />
+      )}
+    </div>
+  );
+}
+
+export default SignUp;

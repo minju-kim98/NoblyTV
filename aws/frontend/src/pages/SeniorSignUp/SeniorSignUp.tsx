@@ -1,3 +1,37 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0eaa9c368a96033a6210895b23a948bc21aa0a470d0f5770f0d590460f4800a7
-size 1118
+import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import SeniorNameGender from '../../layout/senior_sign_up/SeniorNameGender';
+import SeniorBirth from '../../layout/senior_sign_up/SeniorBirth';
+import {
+  PATH_SENIOR_SIGN_UP_BIRTH,
+  PATH_SENIOR_SIGN_UP_NAME_GENDER,
+  PATH_SIGN_IN,
+} from '../../constants/constants';
+import useUserStore from '../../store/useUserStore';
+
+function SeniorSignUp() {
+  const navigate = useNavigate();
+  const { accessToken } = useUserStore();
+  const [nowSeniorSignUp, setNowSeniorSignUp] = useState<string>(
+    PATH_SENIOR_SIGN_UP_NAME_GENDER,
+  );
+
+  useEffect(() => {
+    if (!accessToken) {
+      navigate(PATH_SIGN_IN);
+    }
+  }, [accessToken, navigate]);
+
+  return (
+    <div>
+      {nowSeniorSignUp === PATH_SENIOR_SIGN_UP_NAME_GENDER && (
+        <SeniorNameGender setNowSeniorSignUp={setNowSeniorSignUp} />
+      )}
+      {nowSeniorSignUp === PATH_SENIOR_SIGN_UP_BIRTH && (
+        <SeniorBirth setNowSeniorSignUp={setNowSeniorSignUp} />
+      )}
+    </div>
+  );
+}
+
+export default SeniorSignUp;

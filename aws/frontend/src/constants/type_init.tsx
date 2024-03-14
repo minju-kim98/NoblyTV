@@ -1,3 +1,64 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1dc99a90e416b2d2709bcd188dabc550f2f9abe48b8de9ebc05f4bc28ea07bcc
-size 1103
+import {
+  SignUpType,
+  SeniorSignUpType,
+  TvSignInType,
+  SignInType,
+  UserInfoType,
+  OldUserInfoType,
+} from '../types/api_types';
+
+const signUpInit: SignUpType = {
+  userId: '',
+  username: '',
+  password: '',
+  lunarSolar: 'SOLAR',
+  birth: '',
+  oldUserIds: [],
+};
+const seniorSignUpInit: SeniorSignUpType = {
+  username: '',
+  birth: '',
+  lunarSolar: 'SOLAR',
+  gender: '',
+  medications: [],
+};
+const tvSignInInit: TvSignInType = {
+  tvCode: '',
+  userId: '',
+};
+const signInInit: SignInType = {
+  userId: '',
+  password: '',
+};
+
+const userInfoInit: UserInfoType = {
+  userId: '',
+  username: '',
+  lunarSolar: '',
+  birth: '',
+  familyRelations: [],
+  lastVisitedId: '',
+  userType: '',
+};
+
+const oldUserInfoInit: OldUserInfoType = {
+  userId: '',
+  username: '',
+  lunarSolar: '',
+  birth: '',
+  diaries: [],
+  quizResults: [],
+  gymnastics: [],
+  schedules: [],
+  posts: [],
+  familyposts: [],
+  userType: '',
+};
+export {
+  signUpInit,
+  seniorSignUpInit,
+  tvSignInInit,
+  signInInit,
+  userInfoInit,
+  oldUserInfoInit,
+};

@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:30497b56ab0a2767546dfdbfb4f83eb5c61a30c066d6cfbdaf9866af6bec5ed3
-size 534
+import {
+  StatusMsgBoxS,
+  StatusMsgImgS,
+  StatusMsgContentsS,
+} from './StatusMsgStyle';
+import StatusMsgProps from './StatusMsgType';
+
+function StatusMsg({ statusMsgType, statusMsgContents }: StatusMsgProps) {
+  return (
+    <StatusMsgBoxS>
+      <StatusMsgImgS $iconType={statusMsgType} />
+      <StatusMsgContentsS
+        $contentsColor={statusMsgType === 'error' ? '#ff1f1f' : '#6DCD01'}
+      >
+        {statusMsgContents}
+      </StatusMsgContentsS>
+    </StatusMsgBoxS>
+  );
+}
+export default StatusMsg;
